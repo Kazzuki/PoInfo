@@ -5,13 +5,15 @@
       ul
         - @engineer.errors.full_messages.each do |message|
           li = message
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :company
-    = f.text_field :company
-  .field
-    = f.label :introducton
-    = f.text_field :introducton
-  .actions = f.submit
+  .input-group.mb-3
+    .input-group-prepend
+      span.input-group-text 氏名
+    input.form-control[type="text" name="engineer[name]" id="engineer_name"]
+  .input-group.mb-3
+    .input-group-prepend
+      span#inputGroup-sizing-default.input-group-text 社名
+    input.form-control[type="text" name="engineer[company]" id="engineer_company"]
+  .form-group
+    label[for="exampleFormControlTextarea1"] 紹介文
+    textarea.form-control[name="engineer[introduction]" id="engineer_introduction"]
+  input.btn.btn-primary[type="submit" value="作成"]

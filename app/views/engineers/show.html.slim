@@ -10,6 +10,6 @@ p
   strong 紹介:
   = @engineer.introducton
 
-=> link_to 'Edit', edit_engineer_path(@engineer)
-'|
-=< link_to 'Back', engineers_path
+=> link_to '編集', edit_engineer_path(@engineer), class: "btn btn-primary"
+
+=> link_to '戻る', engineers_path, class: "btn btn-dark"
