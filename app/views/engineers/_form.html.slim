@@ -1,0 +1,17 @@
+= form_for @engineer do |f|
+  - if @engineer.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@engineer.errors.count, "error")} prohibited this engineer from being saved:"
+      ul
+        - @engineer.errors.full_messages.each do |message|
+          li = message
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :company
+    = f.text_field :company
+  .field
+    = f.label :introducton
+    = f.text_field :introducton
+  .actions = f.submit

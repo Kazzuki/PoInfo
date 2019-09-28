@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong エンジニア名:
+  = @engineer.name
+p
+  strong 会社名:
+  = @engineer.company
+p
+  strong 紹介:
+  = @engineer.introducton
+
+=> link_to 'Edit', edit_engineer_path(@engineer)
+'|
+=< link_to 'Back', engineers_path

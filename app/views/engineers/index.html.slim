@@ -1,0 +1,25 @@
+h1 エンジニアの紹介ページ
+
+table
+  thead
+    tr
+      th エンジニア名
+      th 会社名
+      th 自己紹介
+      th
+      th
+      th
+
+  tbody
+    - @engineers.each do |engineer|
+      tr
+        td = engineer.name
+        td = engineer.company
+        td = engineer.introducton
+        td = link_to 'Show', engineer
+        td = link_to 'Edit', edit_engineer_path(engineer)
+        td = link_to 'Destroy', engineer, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Engineer', new_engineer_path
