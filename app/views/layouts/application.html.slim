@@ -1,0 +1,64 @@
+doctype html
+html
+  head
+    title
+      | PoInfo
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  body
+    hedder
+      nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        a.navbar-brand[href="#"]
+          | PoInfo
+        button.navbar-toggler[type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"]
+          span.navbar-toggler-icon
+        #navbarNavDropdown.collapse.navbar-collapse
+          ul.navbar-nav
+            li.nav-item.active
+              a.nav-link[href="#"]
+                | トップ 
+                span.sr-only
+                  | (current)
+            li.nav-item
+              a.nav-link[href="#"]
+                | 企業
+            li.nav-item
+              a.nav-link[href="#"]
+                | エンジニア
+            li.nav-item
+              a.nav-link[href="#"]
+                | PoInfoとは
+    .container
+      = yield
+    footer.page-footer.font-small.blue.pt-4
+  .container-fluid.text-center.text-md-left
+    .row
+      .col-md-6.mt-md-0.mt-3
+        h5.text-uppercase style="color: red;"
+          | PoInfo
+        p
+          | web系企業やエンジニアの情報を
+        p
+          | 伝えるメディア
+      hr.clearfix.w-100.d-md-none.pb-3
+      .col-md-3.mb-md-0.mb-3
+        h5.text-uppercase
+          | Links
+        ul.list-unstyled
+          li
+            a[href="#!"]
+              | トップ
+          li
+            a[href="#!"]
+              | 企業
+          li
+            a[href="#!"]
+              | エンジニア
+          li
+            a[href="#!"]
+              | PoInfoとは
+  .footer-copyright.text-center.py-3
+    | prsents by build開発合宿
