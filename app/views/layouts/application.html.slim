@@ -11,26 +11,27 @@ html
   body
     hedder
       nav.navbar.navbar-expand-lg.navbar-light.bg-light
-        a.navbar-brand[href="#"]
+        a.navbar-brand[href="/"]
           | PoInfo
         button.navbar-toggler[type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"]
           span.navbar-toggler-icon
         #navbarNavDropdown.collapse.navbar-collapse
           ul.navbar-nav
             li.nav-item.active
-              a.nav-link[href="#"]
+              a.nav-link[href="/"]
                 | トップ 
-                span.sr-only
-                  | (current)
             li.nav-item
-              a.nav-link[href="#"]
+              a.nav-link[href="companies"]
                 | 企業
             li.nav-item
-              a.nav-link[href="#"]
+              a.nav-link[href="engineers"]
                 | エンジニア
             li.nav-item
-              a.nav-link[href="#"]
+              a.nav-link[href="about"]
                 | PoInfoとは
+            li.nav-item
+              a.nav-link[href="about"]
+                | 管理者ログイン
     .container
       = yield
     footer.page-footer.font-small.blue.pt-4
@@ -49,16 +50,19 @@ html
           | Links
         ul.list-unstyled
           li
-            a[href="#!"]
+            a[href="/"]
               | トップ
           li
-            a[href="#!"]
+            a[href="companies"]
               | 企業
           li
-            a[href="#!"]
+            a[href="engineers"]
               | エンジニア
           li
-            a[href="#!"]
+            a[href="about"]
               | PoInfoとは
+          li
+            a[href="about"]
+              | 管理者ログイン
   .footer-copyright.text-center.py-3
     | prsents by build開発合宿
