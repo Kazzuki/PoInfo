@@ -1,12 +1,14 @@
 p#notice = notice
+.card.mb-3[style="max-width: 540px;"]
+  .row.no-gutters
+    .col-md-4
+      img.card-img[src="/companies/company1.jpeg" alt="..."]
+    .col-md-8
+      .card-body
+        h4.card-title =@company.name
+        p.card-text =@company.info
+        p.card-text
+          small.text-muted =@company.zip
+=> link_to '編集', edit_company_path(@company), class: "btn btn-primary"
 
-p
-  strong Name:
-  = @company.name
-p
-  strong Zip:
-  = @company.zip
-
-=> link_to 'Edit', edit_company_path(@company)
-'|
-=< link_to 'Back', companies_path
+=> link_to '戻る', companies_path, class: "btn btn-dark"

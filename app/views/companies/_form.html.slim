@@ -1,15 +1,19 @@
 = form_for @company do |f|
   - if @company.errors.any?
     #error_explanation
-      h2 = "#{pluralize(@company.errors.count, "error")} prohibited this company from being saved:"
+      h2 = "#{pluralize(@company.errors.count, "error")} prohibited this engineer from being saved:"
       ul
         - @company.errors.full_messages.each do |message|
           li = message
-
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :zip
-    = f.text_field :zip
-  .actions = f.submit
+  .input-group.mb-3
+    .input-group-prepend
+      span.input-group-text 社名
+    = f.text_field :name, class: "form-control"
+  .input-group.mb-3
+    .input-group-prepend
+      span#inputGroup-sizing-default.input-group-text 住所
+    = f.text_field :zip, class: "form-control"
+  .form-group
+    label 情報
+    = f.text_area :info, class: "form-control"
+  input.btn.btn-primary[type="submit" value="作成"]

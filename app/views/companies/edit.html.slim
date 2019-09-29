@@ -1,8 +1,6 @@
-h1 Editing company
+h1 記事編集
 
 == render 'form'
 
-=> link_to 'Show', @company
-'|
-=< link_to 'Back', companies_path
-
+=> link_to 'プレビュー', @company, class: "btn btn-info"
+=> link_to '戻る', companies_path, class: "btn btn-dark"
