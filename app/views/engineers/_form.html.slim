@@ -8,12 +8,12 @@
   .input-group.mb-3
     .input-group-prepend
       span.input-group-text 氏名
-    input.form-control[type="text" name="engineer[name]" id="engineer_name"]
+    = f.text_field :name, class: "form-control"
   .input-group.mb-3
     .input-group-prepend
       span#inputGroup-sizing-default.input-group-text 社名
-    input.form-control[type="text" name="engineer[company]" id="engineer_company"]
+    = f.text_field :company, class: "form-control"
   .form-group
-    label[for="exampleFormControlTextarea1"] 紹介文
-    textarea.form-control[name="engineer[introduction]" id="engineer_introduction"]
+    label 紹介文
+    = f.text_area :introducton, class: "form-control"
   input.btn.btn-primary[type="submit" value="作成"]

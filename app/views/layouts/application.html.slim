@@ -17,20 +17,20 @@ html
           span.navbar-toggler-icon
         #navbarNavDropdown.collapse.navbar-collapse
           ul.navbar-nav
-            li.nav-item.active
-              a.nav-link[href="/"]
+            li.nav-item
+              = link_to root_path, class: "nav-link"
                 | トップ 
             li.nav-item
-              a.nav-link[href="companies"]
+              = link_to companies_path, class: "nav-link"
                 | 企業
             li.nav-item
-              a.nav-link[href="engineers"]
+              = link_to engineers_path, class: "nav-link"
                 | エンジニア
             li.nav-item
-              a.nav-link[href="about"]
+              = link_to about_path, class: "nav-link"
                 | PoInfoとは
             li.nav-item
-              a.nav-link[href="about"]
+              = link_to about_path, class: "nav-link"
                 | 管理者ログイン
     .container
       = yield
@@ -50,19 +50,19 @@ html
           | Links
         ul.list-unstyled
           li
-            a[href="/"]
+            = link_to root_path, class: "nav-link"
               | トップ
           li
-            a[href="companies"]
+            = link_to companies_path, class: "nav-link"
               | 企業
           li
-            a[href="engineers"]
+            = link_to engineers_path, class: "nav-link"
               | エンジニア
           li
-            a[href="about"]
+            = link_to about_path, class: "nav-link"
               | PoInfoとは
           li
-            a[href="about"]
+            = link_to about_path, class: "nav-link"
               | 管理者ログイン
   .footer-copyright.text-center.py-3
     | prsents by build開発合宿

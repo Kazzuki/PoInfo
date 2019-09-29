@@ -13,49 +13,6 @@ h1 エンジニアページ
     </div>
   </div>
 </div>
-<div class="card mb-3" style="max-width: 540px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="/engineers/engineer2.jpeg" class="card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="card mb-3" style="max-width: 540px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="/engineers/engineer1.jpeg" class="card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="card mb-3" style="max-width: 540px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="/engineers/engineer2.jpeg" class="card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-  </div>
-</div>
-
 table
   thead
     tr
@@ -68,6 +25,20 @@ table
 
   tbody
     - @engineers.each do |engineer|
+      .card.mb-3[style="max-width: 540px;"]
+        .row.no-gutters
+          .col-md-4
+            = link_to engineer_path(engineer)
+              img.card-img[src="/engineers/engineer1.jpeg" alt="..."]
+          .col-md-8
+            .card-body
+              h4.card-title
+                = engineer.name
+              p.card-text
+                = engineer.introducton
+              p.card-text
+                small.text-muted
+                  = engineer.company
       tr
         td = engineer.name
         td = engineer.company

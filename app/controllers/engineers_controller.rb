@@ -19,6 +19,7 @@ class EngineersController < ApplicationController
 
   # GET /engineers/1/edit
   def edit
+    @engineer = Engineer.find(params[:id])
   end
 
   # POST /engineers

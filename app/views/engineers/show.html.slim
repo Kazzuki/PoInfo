@@ -1,15 +1,14 @@
 p#notice = notice
-
-p
-  strong エンジニア名:
-  = @engineer.name
-p
-  strong 会社名:
-  = @engineer.company
-p
-  strong 紹介:
-  = @engineer.introducton
-
+.card.mb-3[style="max-width: 540px;"]
+  .row.no-gutters
+    .col-md-4
+      img.card-img[src="/engineers/engineer1.jpeg" alt="..."]
+    .col-md-8
+      .card-body
+        h4.card-title =@engineer.name
+        p.card-text =@engineer.introducton
+        p.card-text
+          small.text-muted =@engineer.company
 => link_to '編集', edit_engineer_path(@engineer), class: "btn btn-primary"
 
 => link_to '戻る', engineers_path, class: "btn btn-dark"
